@@ -1,0 +1,21 @@
+{% extends 'myapp/base.html' %}
+{% block content %}
+
+<section id="profile" class="container max-w-6xl mx-auto p-6">
+
+    <div class="flex items-start mt-10 ">
+        <div class="flex flex-col shadow-lg border p-10 items-center space-y-5 max-w-sm">
+            <img class="rounded-full " src="{{seller.profile.dp.url}}" alt="">
+            <h1 class="font-bold text-xl">{{seller.username}}</h1>
+            <div class="flex space-x-2 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-gray-700" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+                <h1 class="text-gray-500">{{seller.profile.contact}}</h1>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+{% endblock %}

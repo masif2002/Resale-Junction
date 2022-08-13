@@ -1,0 +1,37 @@
+{% extends 'myapp/base.html' %}
+
+{% block content%}
+
+<section id="loginuser" class="container mx-auto max-w-6xl p-6">
+
+    <div class="mt-8">
+        <h1 class="text-3xl font-bold">
+            Add Profile
+        </h1>
+    </div>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="flex flex-col shadow space-y-8 rounded shadow-lg border mt-6 p-10 w-3/5 ">
+
+            <div class="flex flex-row space-x-4 items-center">
+                <label class="  text-gray-800">Upload Profile Image:</label>
+                <input placeholder="Upload profile Image" type="file" accept="image/*" name="upload" id="upload">
+            </div>
+
+            <div class="flex flex-row space-x-6 items-center">
+                <label class=" text-gray-800">Contact number</label>
+                <input class="shadow appearance-none border rounded p-2 w-2/5 focus:outline focus:outline-2 focus:outline-blue-500 text-gray-600" name="contact" id="contact">
+            </div>
+            
+            <div class="flex items-start">
+                <button  class=" text-white px-6 py-2 rounded bg-brightRed outline outline-1 outline-gray-300 hover:bg-brightRedLight" type="submit">Add</button>
+            </div>
+            
+
+        </div>
+    </form>
+</section>
+
+{% endblock %}

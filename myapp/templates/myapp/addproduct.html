@@ -1,0 +1,48 @@
+{% extends 'myapp/base.html'%}
+{% block content%}
+
+<section id="addproduct" class="container mx-auto max-w-6xl p-6">
+
+    <div class="mt-8">
+        <h1 class="text-3xl font-bold">
+            <span class="text-4xl text-gray-500">+</span>
+            Add Product
+        </h1>
+    </div>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="flex flex-col shadow space-y-8 rounded shadow-lg mt-6 p-10 w-1/2 outline outline-2 outline-gray-400">
+
+            <div class="flex flex-col space-y-2">
+                <h2 class="text-lg font-bold text-gray-800">Product Name</h2>
+                <input class="shadow appearance-none border rounded p-2 w-1/2 focus:outline focus:outline-2 focus:outline-blue-500 text-gray-600" type="text" name="name" id="name" placeholder="Enter product name">
+            </div>
+
+            <div class="flex flex-col space-y-2">
+                <h2 class="text-lg font-bold text-gray-800">Product Price</h2>
+                <input class="shadow appearance-none border rounded p-2 w-1/2 focus:outline focus:outline-2 focus:outline-blue-500 text-gray-600" type="text" name="price" id="price" placeholder="Enter product price">
+            </div>
+
+            <div class="flex flex-col space-y-2">
+                <h2 class="text-lg font-bold text-gray-800">Product Description</h2>
+                <input class="shadow appearance-none border rounded p-2 w-1/2 focus:outline focus:outline-2 focus:outline-blue-500 text-gray-600" type="text" name="desc" id="desc" placeholder="Enter product description">
+            </div>
+
+            <div>
+                <h2 class="text-lg font-bold text-gray-800">Product Image</h2>
+                <input class="mt-4" type="file" accept="image/*" name="upload" id="upload" value="Browse..">
+            </div>
+            
+            <div class="flex justify-center">
+                <input  class=" text-white p-2 w-full rounded-full bg-brightRed outline outline-1 outline-gray-300 hover:bg-brightRedLight" type="submit" name="Add Product" value="Add Product" id="addp">
+            </div>
+            
+
+        </div>
+    </form>
+</section>
+
+
+{% endblock %}
