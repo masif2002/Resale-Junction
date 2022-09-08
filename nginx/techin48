@@ -1,0 +1,19 @@
+# /etc/nginx/sites-available/techin48
+
+server_tokens               off;
+access_log                  /var/log/nginx/techin48.access.log;
+error_log                   /var/log/nginx/techin48.error.log;
+
+server {
+  server_name               .asif.techin48.com;
+  listen                    80;
+  location / {
+    proxy_pass              http://localhost:8000;
+    proxy_set_header        Host $host;
+  }
+
+  location /static {
+    autoindex on;
+    alias /var/www/asif.techin48.com/static/;
+  }
+}
