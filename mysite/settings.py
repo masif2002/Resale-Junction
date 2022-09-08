@@ -34,7 +34,8 @@ if DEBUG:
     STRIPE_PUBLIC_KEY = os.environ['STRIPE_PUBLIC_KEY']
     STRIPE_SECRET_KEY = os.environ['STRIPE_SECRET_KEY']
 
-ALLOWED_HOSTS = []
+# List of hosts Django can serve
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -127,6 +128,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+# STATIC_ROOT = "/var/www/asif.techin48.com/static"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
