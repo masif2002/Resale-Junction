@@ -6,6 +6,10 @@
 
 
 
+https://github.com/masif2002/Resale-Junction/assets/94846379/42e9e4e7-c0c9-492c-bc24-1ad66508a5c4
+
+
+
 ## Tech Stack
 * **Django** - Python Framework
 * **TailwindCSS** - CSS Framework for styling 
